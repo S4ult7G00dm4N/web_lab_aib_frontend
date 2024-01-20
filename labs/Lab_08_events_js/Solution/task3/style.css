@@ -1,0 +1,61 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.input-fields {
+    padding-top: 150px;
+    display:  flex;
+    justify-content: left;
+}
+
+.input-fields div {
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.input-fields label {
+    margin-top: 20px;
+    display:  flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.input-fields input {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    width: 250px;
+    height: 30px;
+}
+
+.color-container {
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 300px;
+    width: 300px;
+    margin-left: 10px;
+    border: 1.5px solid black;
+}
+
+.generated {
+    width: 98%;
+    height: 320px;
+    border: 1.5px solid black;
+    margin: 0 auto;
+    margin-top: 35px;
+    display: flex;
+}
+
+.generate {
+    font-size: 15px;
+    border: 1px solid gray;
+    width: 125px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 5px;
+}
