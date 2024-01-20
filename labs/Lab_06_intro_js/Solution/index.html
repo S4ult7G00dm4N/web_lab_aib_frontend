@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script class="Task 1">
+    let apple=10;
+	let characters = "abcdefghijklmnopqrstuvwxyz";
+	let randomString = "";
+	for (let i = 0; i < 10; i++) {
+	randomString += characters.charAt(Math.floor(Math.random() * characters.length));}
+</script>
+<script class="Task 2">
+        let someInt = Math.floor(Math.random() * 100)
+        let someText = '100'
+        let someBool = true
+        console.log(someInt + someText + someBool);
+        console.log(someBool + someInt + someText);
+        console.log(someText + someBool + someInt);
+        console.log(someBool + someText + someInt);
+        console.log(someInt + someBool + someText);
+        console.log(someText + someInt + someBool);
+    </script>
+<script class="Task 3">
+let myArray = new Array(10);
+for (let i = 0; i < myArray.length; i++) {
+  myArray[i] = Math.floor(Math.random() * 100);
+}
+let filteredArray = myArray.filter(num => num >= 0);
+console.log(myArray);
+console.log(filteredArray);
+/*Метод filter() принимает функцию-обработчик, которая выполняется для каждого элемента массива. 
+В данном случае функция-обработчик проверяет, является ли число num больше или равно нулю. 
+Если число больше или равно нулю, функция-обработчик возвращает true, и элемент остается в массиве. 
+Если число меньше нуля, функция-обработчик возвращает false, и элемент удаляется из массива.*/
+    </script>
+<script class="Task 4">
+function getRandomNumber() {return Math.random();}
+console.log(getRandomNumber());
+function multiplyArray(arr, num) {return arr.map(element => element * num);}
+let arr = [1, 2, 3, 4, 5];
+let multipliedArr = multiplyArray(arr, 2);
+console.log(multipliedArr);
+function randomText() {
+  var texts = ["Text 1", "Text 2", "Text 3", "Text 4", "Text 5"];
+  var randomIndex = Math.floor(Math.random() * texts.length);
+  return texts[randomIndex];
+}
+		/*Этот код создает функцию randomText(), которая генерирует случайное слово из 11 символов. Функция использует цикл
+		for для генерации каждого символа с помощью оператора String.fromCharCode().
+		Внутри цикла генерируется случайное число от 97 до 122 (коды символов 'a' и 'z'), и это число используется для создания символа с помощью
+		String.fromCharCode(). 
+		Результат генерации символов сохраняется в переменной condition. После завершения цикла функция возвращает condition*/
+        console.log(getRandomNumber());
+        console.log(multiplyArray([1, 20, 11, -3, 6], 10));
+        console.log(randomText());
+    </script>
+<script class="Task 5">
+        let Obj = {
+            firstName: 'Victor',
+            surname: 'Robertovich',
+            patronymic: 'Tsoi',
+            birthday: new Date('1962-06-21'),
+            hobby: 'poetry',
+            group: 'Kino',
+            info: function() {
+                return 'Имя: ' + this.firstName + '\nФамилия: ' + this.surname + '\nОтчество: ' 
+                + this.patronymic + '\nХобби: ' + this.hobby + '\nВозраст: ' + (new Date().getFullYear() - this.birthday.getFullYear())
+            }
+        }
+        console.log(Obj.info())
+		let salaryObj = {
+            "Ivanov": 200000,
+            "Petrov": 250000,
+            "Sidorov": 300000,
+            "Kozlov": 180000,
+            "Smirnov": 220000,
+            "Kuznetsov": 280000,
+            "Vasiliev": 240000,
+            "Popov": 270000,
+            "Novikov": 210000,
+            "Morozov": 260000,
+        }
+		sumSalary = Object.values(salaryObj).reduce((a, b) => a + b, 0)
+		console.log(sumSalary);
+		</script>
+</body>
+</html>
